@@ -1,0 +1,60 @@
+.center{
+    
+}
+.button-form{
+    width: 128px;
+    height: 40px;
+    box-shadow: 0px 4px 4px rgba(207, 245, 230, 0.4);
+    border-radius: 19px;
+    border: none;
+    font-size: 20px;
+    line-height: 23px;
+}
+.header{
+    background-color: #ffffff;
+    height: 65px;
+    box-shadow: 0px 4px 4px rgba(146, 146, 146, 0.1);
+}
+
+.header_navbar-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.header_navbar-item{
+    display: inline-block;
+    padding: 0px 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 327;
+    font-size: 30px;
+    line-height: 35px;
+    font-stretch: 100;
+}
+
+.header_navbar-item a{
+    color: #000000;
+    text-decoration: none;
+}
+.header__navbar-logo{
+    
+}
+
+.header_navbar-webname{
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    color: #000000;
+}
+
+.header_navbar-order{
+    background: #fffffd;
+}
+
+.header_navbar-Reservate{
+    background: #A0E4CB;
+    }
