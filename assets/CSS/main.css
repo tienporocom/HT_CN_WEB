@@ -57,4 +57,12 @@
 
 .header_navbar-Reservate{
     background: #A0E4CB;
-    }
+}
+
+.header_navbar-sign{
+    float: right;
+    display: inline;
+    padding: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+}
