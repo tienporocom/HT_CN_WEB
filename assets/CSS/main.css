@@ -17,29 +17,34 @@
 }
 
 .header_navbar-list{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+    display: inline-block;
+ 
 }
 
 .header_navbar-item{
+    color: #000000;
+    text-decoration: none;
     display: inline-block;
     padding: 0px 10px;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 327;
+    font-weight: 327; 
     font-size: 30px;
     line-height: 35px;
     font-stretch: 100;
 }
-
+a{
+    padding: 0px;
+    margin: 0px;
+}
 .header_navbar-item a{
     color: #000000;
     text-decoration: none;
 }
 .header__navbar-logo{
-    
+    position: relative;
+    top: 10px;
+    left: 10px;
 }
 
 .header_navbar-webname{
@@ -54,15 +59,64 @@
 .header_navbar-order{
     background: #fffffd;
 }
-
+.header_navbar-order:hover {
+    box-shadow: -4px -4px 4px rgba(207, 245, 230, 0.6);
+    border: 1px solid black;
+}
 .header_navbar-Reservate{
     background: #A0E4CB;
+}
+.header_navbar-Reservate:hover {
+    box-shadow: -4px -4px 4px rgba(207, 245, 230, 0.6);
+    border: 1px solid black;
 }
 
 .header_navbar-sign{
     float: right;
     display: inline;
-    padding: 10px;
+    padding: 11px;
     font-family: 'Roboto';
     font-style: normal;
+}
+/*  */
+.silde1_heading{
+font-family: 'Roboto Slab';
+font-style: normal;
+font-weight: 700;
+font-size: 75px;
+line-height: 99px;
+ext-align: justify;
+color: #000000;
+
+
+}
+.slide1_heading-Bcolor{
+    display: inline;
+    color: #A0E4CB;
+}
+.slide1_des{
+    width: 572px;
+height: 173px;
+    font-family: 'Roboto Slab';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 40px;
+
+text-align: justify;
+
+color: #2C2C2C;
+
+}
+.slide1_slice1{
+    display: inline-block;
+    width: 60%;
+    height: 855px;
+    background: #ffffff;
+    }
+.slide1_slice2{
+    display: inline-block;
+width: 40%;
+height: 855px;
+background: #A0E4CB;
 }
