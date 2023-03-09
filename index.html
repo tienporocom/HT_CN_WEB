@@ -1,50 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOME . HealthyFood</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"><!--reset css-->
-    <link rel="stylesheet" href="assets/CSS/main.css">
-    <link rel="shortcut icon" href="assets/IMG/logo.png" type="image/x-icon">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;500&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!--reset css-->
+    <link rel="stylesheet" href="assets/CSS/main.css" />
+    <link rel="shortcut icon" href="assets/IMG/logo.png" type="image/x-icon" />
+  </head>
+  <body>
     <div class="app">
-        <header class="header ">
-                     <img class="header_navbar-item header__navbar-logo" src="assets/IMG/logo.png" alt="Logo HF here">
-                    <a class="header_navbar-item header_navbar-webname" href="">HealthyFood</a>
-                    <div class="center header_navbar-list ">
-                       <a class="header_navbar-item" href="">Home</a>
-                        <a class="header_navbar-item" href="">About</a>
-                        <a class="header_navbar-item" href="">Menu</a>
-                        <a class="header_navbar-item" href="">Pages</a>
-                        <a class="header_navbar-item" href="">Cart(<span class="header_navbar-num-of-cart">3</span>)</a>
-                    </div>
-                    <span class="header_navbar-sign">
-                        <button class="button-form header_navbar-order">Order online</button>
-                        <button class="button-form header_navbar-Reservate">Reservate</button>
-                    </span>
-        </header>
-        <div class="container">
-            <div class="slide1">
-                <div class="slide1_slice1">
-                    <p class="silde1_heading">The best place to<br>eat <span class="slide1_heading-Bcolor">salads in LA</span></p>
-                    <p class="slide1_des">We have salad plates with high quality fresh vegetables imported from the top farms in the United States. With sauces prepared by skilled chefs.</p>
+      <header class="header">
+        <img
+          class="header__navbar-logo"
+          src="assets/IMG/logo.png"
+          alt="Logo HF here"
+        />
+        <a class="header_navbar-item header_navbar-webname" href=""
+          >HealthyFood</a
+        >
+        <div class="center header_navbar-list">
+          <a class="header_navbar-item" href="">Home</a>
+          <a class="header_navbar-item" href="">About</a>
+          <a class="header_navbar-item" href="">Menu</a>
+          <a class="header_navbar-item" href="">Pages</a>
+          <a class="header_navbar-item" href=""
+            >Cart(<span class="header_navbar-num-of-cart">3</span>)</a
+          >
+        </div>
+        <span class="header_navbar-sign">
+          <button class="button-form header_navbar-order">Order online</button>
+          <button class="button-form header_navbar-Reservate">Reservate</button>
+        </span>
+      </header>
+      <div class="container">
+        <div class="slide1">
+          <div class="slide1_slice1">
+            <div class="slide_slice1-content">
+                <p class="silde1_heading">
+                    The best place to<br/>eat
+                    <span class="slide1_heading-Bcolor">salads in LA</span>
+                  </p>
+                  <p class="slide1_des">
+                    We have salad plates with high quality fresh vegetables imported
+                    from the top farms in the United States. With sauces prepared by
+                    skilled chefs.
+                  </p>
+                  <div class="slide1_button">
                     <button class="button-form header_navbar-Reservate">Reservate</button>
                     <button class="button-form header_navbar-order">Order online</button>
-              
-                </div>
-                <div class="slide1_slice2">
-
-                </div>
+                  </div>
             </div>
 
+          </div>
+          <img id="Slide1_pic" src="/HT_CN_WEB/assets/IMG/salad-2.webp" alt="Best salad">
+          <div class="slide1_slice2"></div>
         </div>
-        <footer>
-
-        </footer>
+        <div class="slide2">
+            <div class="slide2_banner">
+                <div class="slide2_banner-dish">
+                    <p class="slide2_banner-dish-des">#4</p>
+                </div>
+                <div class="slide2_banner-dish">
+                    <p class="slide2_banner-dish-des">#2</p>
+                </div>
+                <div class="slide2_banner-dish">
+                    <p class="slide2_banner-dish-des">#1</p>
+                </div>
+                <div class="slide2_banner-dish">
+                    <p class="slide2_banner-dish-des">#3</p>
+                </div>
+                <div class="slide2_banner-dish">
+                    <p class="slide2_banner-dish-des">#5</p>
+                </div>
+            </div>
+            <p class="slide2_banner-des">The most used</p>
+            <button class="slide2_banner-button-menu button-form ">View menu</button>
+        </div>
+      </div>
+      <footer>
+          <table class="footer_connect-table">
+              <tr>
+                <td class="footer_connect-table-des" rowspan="4"><p>CONNECT</p></td>
+                <td class="footer_connect-table-info"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-2 -2 24 24"><g fill="currentColor"><path d="M8.695 6.937v1.377H7.687v1.683h1.008V15h2.072V9.997h1.39s.131-.807.194-1.69h-1.576v-1.15c0-.173.226-.404.45-.404h1.128V5h-1.535C8.644 5 8.695 6.685 8.695 6.937z"/><path d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"/></g></svg> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"/></svg>
+                </td>
+            </tr>
+            <tr>
+                <td class="footer_connect-table-info">/HEALTHYFOOD_la</td>
+            </tr>
+            <tr>
+                <td class="footer_connect-table-info">aat</td>
+            </tr>
+            <tr>
+                
+                <td class="footer_connect-table-info">098-235-2664</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td></td>
+                <td>NICE TO MEET YOU HERE</td>
+            </tr>
+            <tr>
+                <td>lo</td>
+                <td>8500 Beverly Blvd Suite #743, Los Angeles, CA 90048</td>
+            </tr>
+            <tr>
+                <td>lo</td>
+                <td>347 N Rodeo Dr, Beverly Hills, CA 90210</td>
+            </tr>
+        </table>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
