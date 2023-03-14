@@ -1,13 +1,11 @@
-* {
-  padding: 0;
-  margin: 0 auto;
-}
 .app {
+  position: relative;
   width: 1440px;
   border: 1px solid black;
+  margin: 0 auto;
 }
-html{
-    font-family: 'Roboto Slab', serif;
+html {
+  font-family: "Roboto Slab", serif;
 }
 .button-form {
   width: 128px;
@@ -18,20 +16,21 @@ html{
   font-size: 20px;
   line-height: 23px;
   font-family: "Roboto";
-    font-style: normal;
+  font-style: normal;
 }
-.button-form :hover{
-    
-}
+/* --------------------HEADER--------------------------*/
 .header {
-    padding: 0 10px;
-    box-sizing: border-box;
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  padding: 0 10px;
+  box-sizing: border-box;
   width: 1440px;
   background-color: #ffffff;
   height: 65px;
   box-shadow: 0px 4px 4px rgba(146, 146, 146, 0.1);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -52,8 +51,8 @@ html{
   font-stretch: 100;
 }
 .header_navbar-item:hover {
-    text-decoration: underline #a0e4cb;
-    text-decoration-thickness: 3px;
+  text-decoration: underline #a0e4cb;
+  text-decoration-thickness: 3px;
 }
 a {
   padding: 0px;
@@ -64,8 +63,9 @@ a {
   text-decoration: none;
 }
 .header__navbar-logo {
-  line-height: 65px;
-  margin: 0;
+  position: relative;
+  
+  top: 10px;
 }
 
 .header_navbar-webname {
@@ -83,7 +83,8 @@ a {
 .header_navbar-Reservate {
   background: #a0e4cb;
 }
-.header_navbar-Reservate:hover, .header_navbar-order:hover, .button-form:hover {
+.header_navbar-Reservate:hover,
+.header_navbar-order:hover {
   box-shadow: -4px -4px 4px rgba(207, 245, 230, 0.6);
   border: 1px solid black;
 }
@@ -93,196 +94,134 @@ a {
   font-style: normal;
   margin: 0;
 }
-/*  */
-.slide1 {
-    position: relative;
-  display: flex;
+#hearder_cart:hover .header_info-cart {
+  display: block;
 }
-.silde1_heading {
-  font-family: "Roboto Slab";
+.header_info-cart {
+  display: none;
+  z-index: 1;
+  left: 864px;
+  top: 64px;
+  position: absolute;
+  background-color: #fff;
+  width: 300px;
+  height: 200px;
+  /* display: block; */
+  list-style: none;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid #a0e4cb;
+  border-top: none;
+}
+.header_info-cart-items {
+  box-sizing: border-box;
+  height: calc(100% / 3);
+  border-bottom: 0.2px solid #a0e4cb;
+  border-radius: 10px;
+  border-collapse: collapse;
+  position: relative;
+}
+.header_info-cart-img {
+  margin: 5px;
+  border-radius: 8px;
+  width: 55px;
+  height: 55px;
+}
+.header-cart-item-name {
+  position: absolute;
+  top: 10px;
+  left: 65px;
+  height: 50px;
+  width: 300px;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 10px;
+}
+.item-change-up,
+.item-change-down,
+.item-quantum {
+  position: absolute;
+  bottom: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 0.5px solid #bde4c7;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.item-change-up {
+  right: 10px;
+}
+.item-change-down {
+  right: 50px;
+}
+.item-quantum {
+  font-size: 20px;
+  right: 29px;
+  border: none;
+}
+.item-change-up:hover,
+.item-change-down:hover {
+  background-color: #bde4c7;
+  color: #fff;
+}
+/* --------------------FOOTER-------------------------*/
+
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: #a0e4cb;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_box{
+  margin: 0;
+}
+.footer_connect-table {
+  position: relative;
+  left: 50px;
+  margin: 0;
+}
+.footer_icon1 {
+  padding-right: 10px;
+}
+.footer_connect-table-des,
+.footer_connect-table-info,
+.footer_loc-table-info,
+.footer_loc-table-des{
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 75px;
+  line-height: 36px;
   color: #000000;
 }
-.slide1_heading-Bcolor {
-  display: inline;
-  color: #a0e4cb;
-}
-.slide1_des {
-    margin-top: 20px;
-    margin-bottom: 50px;
-  width: 572px;
-  height: 173px;
-  font-family: "Roboto Slab";
-  font-style: normal;
-  font-weight: 400;
+.footer_connect-table-des {
+  display: block;
+  position: relative;
+  top: 175px;
+  left: 10px;
   font-size: 30px;
-  line-height: 40px;
-
-  text-align: justify;
-
-  color: #2c2c2c;
+  width: 200px;
+  margin: 0;
+  transform-origin: top left;
+  transform: rotate(-90deg);
 }
-.slide1_button{
-    display: flex;
-    padding: 0 100px;
-    justify-content: space-around;
-}
-.slide1_slice1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* align-items: center; */
-  width: 60%;
-  height: 855px;
-  background: #ffffff;
-}
-.slide1_slice2 {
-  display: inline-block;
-  width: 40%;
-  height: 855px;
-  background: #a0e4cb;
-}
-#Slide1_pic{
-    position: absolute;
-    top: 181px;
-    left: 750px;
-    width: 567px;
-    height: 567px;
-    border-radius: 76px;
-    transform: rotate(-5deg);
-}
-/*  */
-
-.slide2{
-    height: 600px;
-    text-align: center;
-}
-.slide2_banner{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 100px;
-    margin: 100px 148px 14px 148px;
-}
-.slide2_banner-dish{
-    border-radius: 35px;
-    background-repeat: no-repeat;
-
-}
-.slide2_banner-dish:nth-child(1){
-    background: url(/HT_CN_WEB/assets/IMG/meal1.png);
-    background-size: cover;
-    width: 150px;
-    height: 150px;
-}
-.slide2_banner-dish:nth-child(2){
-    background: url(/HT_CN_WEB/assets/IMG/image.jfif);
-    background-size: cover;
-    width: 200px;
-    height: 200px;
-}
-.slide2_banner-dish:nth-child(3){
-    background: url(/HT_CN_WEB/assets/IMG/image.webp);
-    background-size: cover;
-    width: 300px;
-    height: 300px;
-}
-.slide2_banner-dish:nth-child(4){
-    background: url(/HT_CN_WEB/assets/IMG/chipotle-chicken.jpg);
-    background-size: cover;
-    width: 200px;
-    height: 200px;
-}
-.slide2_banner-dish:nth-child(5){
-    background: url(/HT_CN_WEB/assets/IMG/image.jfif);
-    background-size: cover;
-    width: 150px;
-    height: 150px;
-}
-.slide2_banner-dish-des{
-    font-family: 'Roboto Slab';
-font-style: normal;
-font-weight: 700;
-font-size: 75px;
-text-align: center;
-color: #fffc3a;
-width: 100%;
-height: 100%;
-background-color: #d6d6d67c;
-border-radius: 35px;
-display: none;
-}
-.slide2_banner-dish:first-child, .slide2_banner-dish:last-child{
-    line-height: 150px;
-}
-.slide2_banner-dish:nth-child(2), .slide2_banner-dish:nth-child(4){
-    line-height: 200px;
-}
-.slide2_banner-dish:nth-child(3){
-    line-height: 300px;
+.footer_connect-table-info , .footer_loc-table-info{
+  font-size: 20px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #000000;
+  padding: 5px;
 }
 
-.slide2_banner-dish:first-child:hover .slide2_banner-dish-des, 
-.slide2_banner-dish:nth-child(2):hover .slide2_banner-dish-des,
-.slide2_banner-dish:nth-child(3):hover .slide2_banner-dish-des, 
-.slide2_banner-dish:nth-child(4):hover .slide2_banner-dish-des, 
-.slide2_banner-dish:last-child:hover .slide2_banner-dish-des{
-    display: inline-block;
+.footer_loc-table{
+  width: 320px;
+  margin: 20px 0;
 }
-.slide2_banner-des{
-    text-align: center;
-font-family: 'Roboto Slab';
-font-style: normal;
-font-weight: 700;
-font-size: 75px;
-line-height: 99px;
-color: #000000;
-}
-.slide2_banner-button-menu{
-    width: 250px;
-    height: 65px;
-    font-weight: 600;
-font-size: 33px;
-line-height: 65px;
-color: #fff;
-    background-color: #a0e4cb;
-    margin-top: 50px;
-    
-}
-/* \ */
+.footer_loc-table-des{
+  font-size: 20px;
 
-footer{
-    height: 200px;
-    background-color: #a0e4cb;
-    display: flex;
-    justify-content: space-evenly;
-}
-.footer_connect-table{
-}
-.footer_connect-table-des{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-    color: #000000;  
-    vertical-align: bottom;
-    height: 19px;
-}
-.footer_connect-table-des p{
-    transform-origin: top left;
-    transform: rotate(-90deg);
-}
-.footer_connect-table-info{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 19px;
-    letter-spacing: 0.05em;
-    color: #000000;
-    padding: 5px;
-    
 }
