@@ -18,6 +18,10 @@ html {
   font-family: "Roboto";
   font-style: normal;
 }
+.container{
+  margin-top: 65px;
+  position: relative;
+}
 /* --------------------HEADER--------------------------*/
 .header {
   z-index: 1;
@@ -93,6 +97,9 @@ a {
   font-family: "Roboto";
   font-style: normal;
   margin: 0;
+}
+.header_navbar-num-of-cart{
+  color: #a0e4cb;
 }
 #hearder_cart:hover .header_info-cart {
   display: block;
