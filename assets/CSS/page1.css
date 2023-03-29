@@ -52,12 +52,13 @@
 }
 #Slide1_pic {
   position: absolute;
-  top: 181px;
-  left: 750px;
+  top: 160px;
+  left: 800px;
   width: 567px;
   height: 567px;
   border-radius: 76px;
   transform: rotate(-5deg);
+  object-fit: cover;
 }
 .slide_slice1-content{
   margin: 0 auto;
@@ -160,6 +161,7 @@
   background-color: #a0e4cb;
   margin-top: 50px;
   cursor: pointer;
+  transition: font-size 0.1s;
 }
 .slide2_banner-button-menu:hover {
   font-size: 40px;

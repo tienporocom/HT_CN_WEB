@@ -116,13 +116,20 @@ a {
   /* display: block; */
   list-style: none;
   border-radius: 0 0 10px 10px;
-  border: 1px solid #a0e4cb;
+  /* border: 1px solid #a0e4cb; */
+  /* border-bottom: 1px solid #979797; */
+
   border-top: none;
+}
+.header_on-this-site{
+  text-decoration: underline #878787;
+  text-decoration-thickness: 2px;
 }
 .header_info-cart-items {
   box-sizing: border-box;
   height: calc(100% / 3);
-  border-bottom: 0.2px solid #a0e4cb;
+  /* border-bottom: 0.2px solid #a0e4cb; */
+  border-bottom: 0.2px solid #979797;
   border-radius: 10px;
   border-collapse: collapse;
   position: relative;
@@ -132,6 +139,7 @@ a {
   border-radius: 8px;
   width: 55px;
   height: 55px;
+  object-fit: cover;
 }
 .header-cart-item-name {
   position: absolute;
