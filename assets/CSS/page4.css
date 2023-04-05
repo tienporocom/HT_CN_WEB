@@ -1,0 +1,119 @@
+.container {
+  margin-top: 65px;
+  position: relative;
+}
+
+.ctn-slide1 {
+  position: relative;
+  display: flex;
+}
+
+.slide1_slice1 {
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+  /* position: absolute;
+width: 382px;
+height: 79px;
+left: 119px;
+top: 83px; */
+  /* align-items: center; */
+  width: 60%;
+  height: 855px;
+  background: #ffffff;
+}
+
+.slide1_slice2 {
+  display: inline-block;
+  width: 40%;
+  height: 855px;
+  background: #a0e4cb;
+}
+
+.slide1-slice1-content {
+  /* position: relative; */
+  margin-left: 120px;
+  margin-top: 158px;
+}
+
+/*xíu chingr mấy cái icon thì chỉnh fontsite là nó bự lên nha o
+  cái nào má
+  đnag căn đều mà
+  m chưa chỉnh width heiht cho nó     width: 430px;
+  chỉnh ca heading lun sai lun r
+
+  */
+.slide2 {
+  height: 600px;
+  text-align: center;
+}
+
+.silde1_heading {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 79px;
+  display: flex;
+  align-items: center;
+  width: 382px;
+  height: 79px;
+  color: #000000;
+
+}
+
+.slide1_des {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  width: 428px;
+  height: 174px;
+  color: #2C2C2C;
+}
+
+.ctn-contact {
+  position: absolute;
+  top: 456px;
+}
+
+.slide1_info {
+  padding-top: 10px;
+}
+
+.slide1_icon {
+ 
+  padding: 10px;
+  display: inline-block;
+
+  background: #CFF5E6;
+  border-radius: 25px;
+}
+
+.fa-solid fa-square-phone {
+  padding-top: 6px;
+}
+.fa-brands fa-square-facebook{
+  padding: 5px 40px 5.57px 11px ;
+}
+.fa-brands fa-square-instagram{
+  padding: 5.5px 9.7px 4.87px 43.8px;
+}
+.slide1_info {
+  padding-top: 21px;
+}
+.rect{
+  position: absolute;
+
+  top: 160px;
+  left: 800px;
+  width: 716px;
+  height: 741px;
+  background: #FFFFFF;
+  box-shadow: -4px 4px 15px -5px rgba(0, 0, 0, 0.25);
+  border-radius: 34px;
+}
