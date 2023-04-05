@@ -4,116 +4,123 @@
 }
 
 .ctn-slide1 {
-  position: relative;
   display: flex;
 }
-
 .slide1_slice1 {
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-  /* position: absolute;
-width: 382px;
-height: 79px;
-left: 119px;
-top: 83px; */
-  /* align-items: center; */
-  width: 60%;
-  height: 855px;
-  background: #ffffff;
+  width: 840px;
+  padding: 80px 0 0 120px;
 }
-
-.slide1_slice2 {
-  display: inline-block;
-  width: 40%;
-  height: 855px;
-  background: #a0e4cb;
-}
-
-.slide1-slice1-content {
-  /* position: relative; */
-  margin-left: 120px;
-  margin-top: 158px;
-}
-
-/*xíu chingr mấy cái icon thì chỉnh fontsite là nó bự lên nha o
-  cái nào má
-  đnag căn đều mà
-  m chưa chỉnh width heiht cho nó     width: 430px;
-  chỉnh ca heading lun sai lun r
-
-  */
-.slide2 {
-  height: 600px;
-  text-align: center;
-}
-
 .silde1_heading {
-  font-family: 'Roboto Slab';
-  font-style: normal;
+  font-family: "Roboto Slab";
   font-weight: 700;
   font-size: 60px;
   line-height: 79px;
-  display: flex;
   align-items: center;
-  width: 382px;
-  height: 79px;
-  color: #000000;
-
+  margin-bottom: 15px;
 }
-
 .slide1_des {
-  font-family: 'Roboto Slab';
-  font-style: normal;
+  font-family: "Roboto Slab";
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
+  text-align: justify;
+  width: 430px;
+}
+.ctn-contact {
+  margin-top: 35px;
+}
+.slide1_icon {
+  padding: 10px;
+  background-color: #a0e4cb;
+  display: inline-block;
+  border-radius: 25px;
+}
+.slide1_icon i {
+  color: #383838dd;
+}
+.slide1_info {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
   display: flex;
   align-items: center;
   text-align: justify;
-  width: 428px;
-  height: 174px;
-  color: #2C2C2C;
+  width: 290px;
+  margin: 5px 0 10px 0;
 }
-
-.ctn-contact {
+.space_lit {
+  height: 30px;
+  width: 100%;
+  display: inline;
+}
+.slide1_slice2 {
+  width: 600px;
+  height: 870px;
+  background-color: #a0e4cb;
+  position: relative;
+}
+.rect {
+  display: block;
   position: absolute;
-  top: 456px;
-}
-
-.slide1_info {
-  padding-top: 10px;
-}
-
-.slide1_icon {
- 
-  padding: 10px;
-  display: inline-block;
-
-  background: #CFF5E6;
-  border-radius: 25px;
-}
-
-.fa-solid fa-square-phone {
-  padding-top: 6px;
-}
-.fa-brands fa-square-facebook{
-  padding: 5px 40px 5.57px 11px ;
-}
-.fa-brands fa-square-instagram{
-  padding: 5.5px 9.7px 4.87px 43.8px;
-}
-.slide1_info {
-  padding-top: 21px;
-}
-.rect{
-  position: absolute;
-
-  top: 160px;
-  left: 800px;
-  width: 716px;
-  height: 741px;
-  background: #FFFFFF;
+  background: #ffffff;
+  width: 740px;
+  height: 715px;
+  top: 78px;
+  left: -280px;
   box-shadow: -4px 4px 15px -5px rgba(0, 0, 0, 0.25);
   border-radius: 34px;
+}
+.form_table {
+  margin-top: 90px;
+  margin-left: 60px;
+}
+.form_table td label {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: rgb(40, 40, 40);
+}
+.form_table tr td:first-child {
+  width: 338px;
+}
+.form_table td input,
+.form_table td textarea {
+  width: 250px;
+  height: 62px;
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding-left: 25px;
+  background: #ffffff;
+  box-shadow: 0px 0px 4px rgba(157, 157, 157, 0.33);
+  border-radius: 30px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+.form_table td input::placeholder,
+.form_table td textarea::placeholder {
+  color: #d5d5d5;
+  font-family: "Roboto";
+}
+.form_table td textarea {
+  padding-top: 20px;
+  width: 588px;
+  height: 160px;
+}
+.b1 {
+  font-family: "Roboto";
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  background: #a0e4cb;
+  box-shadow: 4px 4px 4px #cff5e6;
+  border-radius: 19px;
 }
