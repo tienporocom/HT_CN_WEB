@@ -1,7 +1,7 @@
 .app {
   position: relative;
   width: 1440px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 0 auto;
 }
 html {
@@ -18,6 +18,10 @@ html {
   font-family: "Roboto";
   font-style: normal;
 }
+.button-form a{
+  color: #000;
+  text-decoration: none;
+}
 .container{
   margin-top: 65px;
   position: relative;
@@ -27,9 +31,11 @@ html {
   z-index: 1;
   position: fixed;
   top: 0px;
+  left: 0;
   padding: 0 10px;
   box-sizing: border-box;
-  width: 1440px;
+  width: 100vw;
+  min-width: 1440px;
   background-color: #ffffff;
   height: 65px;
   box-shadow: 0px 4px 4px rgba(146, 146, 146, 0.1);

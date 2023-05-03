@@ -163,6 +163,13 @@
   cursor: pointer;
   transition: font-size 0.1s;
 }
+
+.slide2_banner-button-menu a{
+  text-decoration: none;
+  color: #fff;
+
+}
+
 .slide2_banner-button-menu:hover {
   font-size: 40px;
 }
