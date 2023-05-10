@@ -2,9 +2,91 @@
 <html>
   <head>
     <title>ADMIN.Healthyfood</title>
-    <link rel="stylesheet" type="text/css" href="admin.css" />
     <link rel="stylesheet" href="assets/CSS/admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
   </head>
+  <body>
+    <script>
+        // load table products
+        $(document).ready(function () {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://6457cf7b1a4c152cf98b05ea.mockapi.io/api/admin/products');
+            xhr.responseType = 'json';
+            xhr.onload = function (e) {
+                if (this.status == 200) {
+                    console.log('response', this.response); // JSON response
+                    this.response.forEach(element => {
+                        var classRecord = 'product-record-' + element.id 
+                        $(".product-list").append('<tr class=\'' + classRecord +'\'><td>' + element.code + '</td><td>' 
+                          + element.name + '</td><td>' 
+                            + element.price + '$</td><td>'
+                              + element.remainingQuantity + '</td><td>' +
+                                '<button class="btn btn-primary" onclick=\'detailProduct(' + element.id + ')\'>Details</button>' +
+                                '<button class="btn btn-warning" onclick=\'editProduct(' + element.id + ')\'>Edit</button>' +
+                                '<button class="btn btn-danger" onclick=\'deleteProduct(' + element.id + ')\'>Delete product</button></td></tr>')
+                    });
+                }
+            };
+            xhr.send();
+        });
+
+        function deleteProduct(productId) {
+          const xhr = new XMLHttpRequest();
+            xhr.open('DELETE', 'https://6457cf7b1a4c152cf98b05ea.mockapi.io/api/admin/products/' + productId);
+            xhr.responseType = 'json';
+            xhr.send();
+            $('.product-record-' + productId).remove()
+        }
+
+        function detailProduct(productId) {
+          
+        }
+
+        function editProduct(productId) {
+          
+        }
+
+        function addProduct() {
+          
+        }
+
+        $(document).ready(function () {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://6457cf7b1a4c152cf98b05ea.mockapi.io/api/admin/orders');
+            xhr.responseType = 'json';
+            xhr.onload = function (e) {
+                if (this.status == 200) {
+                    console.log('response', this.response); // JSON response
+                    this.response.forEach(element => {
+                        var classRecord = 'order-record-' + element.id 
+                        $(".oders-table").append('<tr class=\'' + classRecord +'\'><td>'
+                          + element.orderId + '</td><td>' 
+                            + element.orderDate + '</td><td>'
+                              + element.value + '$</td><td>'
+                                + element.status + '</td><td>' +
+                                '<button class="btn btn-primary" onclick=\'detailsOrder(' + element.id + ')\'>Details</button>' +
+                                '<button class="btn btn-warning" onclick=\'orderProcessing(' + element.id + ')\'>Order processing</button>' +
+                                '<button class="btn btn-danger" onclick=\'cancelOrder(' + element.id + ')\'>Cancel order</button></td></tr>')
+                    });
+                }
+            };
+            xhr.send();
+        });
+
+        function detailsOrder(orderId) {
+          
+        }
+
+        function orderProcessing(orderId) {
+          
+        }
+
+        function cancelOrder(orderId) {
+          
+        }      
+    </script>
   <body>
     <header>
       <h1>Healthyfood - Admin</h1>
@@ -33,34 +115,15 @@
               <th>Action</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>ORD001</td>
-              <td>01/05/2023</td>
-              <td>50$</td>
-              <td>Waiting for progressing</td>
-              <td>
-                <button class="btn btn-primary">Details</button>
-                <button class="btn btn-success">Order processing</button>
-                <button class="btn btn-danger">Cancel order</button>
-              </td>
-            </tr>
-            <tr>
-              <td>ORD002</td>
-              <td>02/05/2023</td>
-              <td>12$</td>
-              <td>Processed</td>
-              <td>
-                <button class="btn btn-primary">Details</button>
-              </td>
-            </tr>
+          <tbody class="oders-table">
+            
           </tbody>
         </table>
       </section>
       <section id="products">
         <h2>Products</h2>
         <button class="btn btn-success">Add Product</button><br /><br />
-        <table>
+        <table id="table-product">
           <thead>
             <tr>
               <th>Product Code</th>
@@ -70,51 +133,7 @@
               <th>Action</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>PRD001</td>
-              <td>Salmon salad</td>
-              <td>2.5$</td>
-              <td>5</td>
-              <td>
-                <button class="btn btn-primary">Details</button>
-                <button class="btn btn-warning">Edit</button>
-                <button class="btn btn-danger">Delete product</button>
-              </td>
-            </tr>
-            <tr>
-              <td>PRD002</td>
-              <td>Stewed bean rice</td>
-              <td>3.0$</td>
-              <td>15</td>
-              <td>
-                <button class="btn btn-primary">Details</button>
-                <button class="btn btn-warning">Edit</button>
-                <button class="btn btn-danger">Delete product</button>
-              </td>
-            </tr>
-            <tr>
-              <td>PRD003</td>
-              <td>Yogurt salad</td>
-              <td>1.8$</td>
-              <td>8</td>
-              <td>
-                <button class="btn btn-primary">Details</button>
-                <button class="btn btn-warning">Edit</button>
-                <button class="btn btn-danger">Delete product</button>
-              </td>
-            </tr>
-            <tr>
-              <td>PRD004</td>
-              <td>Grilled ribs rice</td>
-              <td>5.0$</td>
-              <td>3</td>
-              <td>
-                <button class="btn btn-primary">Details</button>
-                <button class="btn btn-warning">Edit</button>
-                <button class="btn btn-danger">Delete product</button>
-              </td>
-            </tr>
+          <tbody class="product-list">
           </tbody>
         </table>
       </section>
