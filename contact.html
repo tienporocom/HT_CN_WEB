@@ -55,6 +55,38 @@
       crossorigin="anonymous"
     ></script>
     <script>
+       const form = document.querySelector("form");
+      const button = document.querySelector(".b1");
+
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const xhr = new XMLHttpRequest();
+        const url = "https://6457e33c0c15cb1482135ab6.mockapi.io/BookingList";
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const tel = document.getElementById("tel").value;
+        const sub = document.getElementById("sub").value;
+        const mess = document.getElementById("mess").value;
+
+        const data = JSON.stringify({
+          name: name,
+          email: email,
+          tel: tel,
+          sub: sub,
+          mess: mess,
+        });
+
+        xhr.onreadystatechange = function () {
+          if (this.readyState === 4 && this.status === 200) {
+            console.log("Data sent successfully");
+          } else alert ('failer')
+        };
+
+        xhr.send(data);
       $(document).ready(function () {
         function validName() {
           let reg = /^([A-Z]{1}[a-z]*\s)*([A-Z]{1}[a-z]*)*$/;
@@ -110,11 +142,11 @@
         }
 
         function clearInp() {
-          $("#name").val('');
-          $("#email").val('');
-          $("#tel").val('');
-          $("#sub").val('');
-          $("#mess").val('');
+          $("#name").val("");
+          $("#email").val("");
+          $("#tel").val("");
+          $("#sub").val("");
+          $("#mess").val("");
         }
         $("#sub").blur(validsub);
         $(".b1").click(function () {
@@ -128,6 +160,8 @@
             clearInp();
           }
         });
+      });
+     
       });
     </script>
   </head>
@@ -149,32 +183,44 @@
         <a class="header_navbar-item" href="./about.html">About</a>
         <a class="header_navbar-item" href="./menu.html">Menu</a>
         <a class="header_navbar-item" href="">Pages</a>
-        <a  class="header_navbar-item" id="hearder_cart" href=""
-        >Cart(<span class="header_navbar-num-of-cart">3</span>)
-        <ul class="header_info-cart">
+        <a class="header_navbar-item" id="hearder_cart" href=""
+          >Cart(<span class="header_navbar-num-of-cart">3</span>)
+          <ul class="header_info-cart">
             <li class="header_info-cart-items">
-              <img class="header_info-cart-img" src="./assets/IMG/salad-2.png" alt="">
-                <p class="header-cart-item-name">Salmon salad</p>
-                <button class="item-change-down">-</button>
-                <div class="item-quantum">1</div>
-                <button class="item-change-up">+</button>
+              <img
+                class="header_info-cart-img"
+                src="./assets/IMG/salad-2.png"
+                alt=""
+              />
+              <p class="header-cart-item-name">Salmon salad</p>
+              <button class="item-change-down">-</button>
+              <div class="item-quantum">1</div>
+              <button class="item-change-up">+</button>
             </li>
             <li class="header_info-cart-items">
-              <img class="header_info-cart-img" src="./assets/IMG/meal1.png" alt="">
+              <img
+                class="header_info-cart-img"
+                src="./assets/IMG/meal1.png"
+                alt=""
+              />
               <p class="header-cart-item-name">Stewed bean rice</p>
               <button class="item-change-down">-</button>
               <div class="item-quantum">1</div>
               <button class="item-change-up">+</button>
-          </li>
-          <li class="header_info-cart-items">
-            <img class="header_info-cart-img" src="./assets/IMG/chipotle-chicken.jpg" alt="">
-            <p class="header-cart-item-name">Cucumber mixed fruit</p>
-            <button class="item-change-down">-</button>
-            <div class="item-quantum">1</div>
-            <button class="item-change-up">+</button>
-          </li>
-        </ul>
-      </a>
+            </li>
+            <li class="header_info-cart-items">
+              <img
+                class="header_info-cart-img"
+                src="./assets/IMG/chipotle-chicken.jpg"
+                alt=""
+              />
+              <p class="header-cart-item-name">Cucumber mixed fruit</p>
+              <button class="item-change-down">-</button>
+              <div class="item-quantum">1</div>
+              <button class="item-change-up">+</button>
+            </li>
+          </ul>
+        </a>
       </div>
       <span class="header_navbar-sign" style="opacity: 0%">
         <button class="button-form header_navbar-order">Order online</button>
@@ -212,7 +258,7 @@
 
         <div class="slide1_slice2">
           <div class="rect">
-            <form action="" >
+            <form action="">
               <table class="form_table">
                 <tr>
                   <td>
@@ -324,7 +370,7 @@
               data-dismiss="modal"
               aria-label="Close"
             >
-              <span aria-hidden="true" >&times;</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
